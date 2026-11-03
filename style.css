@@ -1,0 +1,584 @@
+/* ==========================================================================
+   1. VARIÁVEIS GLOBAIS E CORES ALEGRES (FESTAS & DELIVERY)
+   ========================================================================== */
+:root {
+    /* Cores Principais Alegres */
+    --coral-primary: #ff6b35;      /* Laranja Coral Vibrante (Energia & Comida) */
+    --coral-hover: #e85d04;        /* Laranja Hover */
+    --yellow-accent: #ffb703;     /* Amarelo Girassol Festivo */
+    --pink-accent: #ff4d6d;       /* Rosa Festivo & Confeitaria */
+    --purple-accent: #7209b7;     /* Roxo Doce */
+    --teal-accent: #2ec4b6;       /* Menta / Verde Água Fresco */
+    
+    /* Fundo e Apoio */
+    --bg-main: #fffcf8;           /* Fundo Creme Bem Leve e Quente */
+    --bg-alt: #f7f0eb;            /* Fundo Alternativo Suave */
+    --card-bg: #ffffff;
+    
+    /* Textos */
+    --text-dark: #2b2d42;         /* Texto Principal Escuro Suave */
+    --text-muted: #6c757d;        /* Texto Secundário */
+    --border-color: #ffe3d8;
+}
+
+/* ==========================================================================
+   2. RESET E ESTILOS BASE
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, .logo-text, .hero-badge {
+    font-family: 'Fredoka', cursive, sans-serif;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   3. BARRA SUPERIOR DE ALERTA DE LOCALIZAÇÃO (TOP BAR)
+   ========================================================================== */
+.top-bar {
+    background: linear-gradient(90deg, #d00000 0%, #ff6b35 100%);
+    color: white;
+    padding: 10px 5%;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.location-tag {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.top-bar-contact span {
+    margin-left: 15px;
+}
+
+/* ==========================================================================
+   4. CABEÇALHO (HEADER)
+   ========================================================================== */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.logo-icon {
+    background: linear-gradient(135deg, var(--coral-primary), var(--pink-accent));
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    box-shadow: 0 3px 8px rgba(255, 107, 53, 0.25);
+}
+
+.logo-text {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--coral-primary);
+}
+
+.logo-text span {
+    color: var(--purple-accent);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 6px 10px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.nav-links a:hover {
+    color: var(--coral-primary);
+    background-color: var(--bg-alt);
+}
+
+.btn-header {
+    background-color: #25d366;
+    color: white;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border-radius: 20px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 3px 8px rgba(37, 211, 102, 0.25);
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.btn-header i {
+    font-size: 1rem;
+}
+
+.btn-header:hover {
+    background-color: #20ba5a;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
+}
+
+/* ==========================================================================
+   5. BANNER PRINCIPAL (HERO)
+   ========================================================================== */
+.hero {
+    background: linear-gradient(rgba(43, 45, 66, 0.75), rgba(255, 107, 53, 0.75)), url('https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=1600&q=80') center/cover;
+    color: white;
+    padding: 90px 5% 120px;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.hero-badge {
+    background-color: var(--yellow-accent);
+    color: #000;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    color: #fff3ec;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background-color: #25d366;
+    color: white;
+    padding: 15px 32px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+    transition: transform 0.3s;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    background-color: white;
+    color: var(--coral-primary);
+    padding: 15px 32px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.1rem;
+    transition: transform 0.3s;
+}
+
+.btn-secondary:hover {
+    transform: scale(1.05);
+}
+
+/* ==========================================================================
+   6. CARDS DE HIGHLIGHT (DESTAQUES DE CATEGORIA)
+   ========================================================================== */
+.highlights-wrapper {
+    max-width: 1200px;
+    margin: -60px auto 60px;
+    padding: 0 5%;
+    position: relative;
+    z-index: 10;
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.highlight-card {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.highlight-card:hover {
+    transform: translateY(-8px);
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-size: 1.8rem;
+    color: white;
+}
+
+.card-pink .card-icon { background-color: var(--pink-accent); }
+.card-purple .card-icon { background-color: var(--purple-accent); }
+.card-orange .card-icon { background-color: var(--coral-primary); }
+.card-teal .card-icon { background-color: var(--teal-accent); }
+
+.highlight-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+
+.highlight-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   7. SEÇÕES E TÍTULOS
+   ========================================================================== */
+.section {
+    padding: 70px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bg-light-alt {
+    background-color: var(--bg-alt);
+    border-radius: 24px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.sub-title {
+    color: var(--coral-primary);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin: 5px 0 10px;
+}
+
+.section-title p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+/* ==========================================================================
+   8. CARTÕES DE PRODUTOS
+   ========================================================================== */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    position: relative;
+    border: 2px solid #fff;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: white;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-weight: 800;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.badge-festas { background-color: var(--pink-accent); }
+.badge-doce { background-color: var(--purple-accent); }
+.badge-delivery { background-color: var(--coral-primary); }
+.badge-sacola { background-color: var(--teal-accent); }
+
+.product-img {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.product-info {
+    padding: 25px;
+}
+
+.product-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.product-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: opacity 0.3s;
+}
+
+.product-btn:hover {
+    opacity: 0.9;
+}
+
+.btn-pink { background-color: var(--pink-accent); }
+.btn-purple { background-color: var(--purple-accent); }
+.btn-orange { background-color: var(--coral-primary); }
+.btn-teal { background-color: var(--teal-accent); }
+
+/* ==========================================================================
+   9. ALERTA DE LOCALIZAÇÃO E CONTATO
+   ========================================================================== */
+.location-banner {
+    background: linear-gradient(135deg, #ffb703, #ff6b35);
+    color: white;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.25);
+}
+
+.banner-icon {
+    font-size: 3rem;
+    background: rgba(255, 255, 255, 0.2);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.banner-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.contact-details h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.info-block {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.info-block i {
+    font-size: 1.5rem;
+    margin-top: 3px;
+}
+
+.icon-pink { color: var(--pink-accent); }
+.icon-purple { color: var(--purple-accent); }
+.icon-orange { color: var(--coral-primary); }
+.icon-teal { color: var(--teal-accent); }
+
+.map-wrapper {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    min-height: 320px;
+}
+
+.map-frame {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* ==========================================================================
+   10. RODAPÉ
+   ========================================================================== */
+footer {
+    background-color: var(--text-dark);
+    color: white;
+    padding: 60px 5% 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-col h4 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: var(--yellow-accent);
+}
+
+.footer-col p, .footer-col a {
+    color: #d1d5db;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.footer-col a:hover {
+    color: var(--coral-primary);
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+    border-top: 1px solid #4b5563;
+    text-align: center;
+    color: #9ca3af;
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   11. BOTÃO WHATSAPP PULSANTE
+   ========================================================================== */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25d366;
+    color: white;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+    z-index: 9999;
+    text-decoration: none;
+}
+
+.pulse {
+    animation: pulse-animation 2s infinite;
+}
+
+@keyframes pulse-animation {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hero h1 { font-size: 2.2rem; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .top-bar { flex-direction: column; text-align: center; gap: 8px; }
+}
